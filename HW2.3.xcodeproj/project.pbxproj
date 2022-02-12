@@ -13,6 +13,7 @@
 		661D7A1727ABFC3C0070486E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 661D7A1527ABFC3C0070486E /* Main.storyboard */; };
 		661D7A1927ABFC3C0070486E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 661D7A1827ABFC3C0070486E /* Assets.xcassets */; };
 		661D7A1C27ABFC3C0070486E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 661D7A1A27ABFC3C0070486E /* LaunchScreen.storyboard */; };
+		6655C86F27B287BB00C96BF8 /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6655C86E27B287BB00C96BF8 /* user.swift */; };
 		6658DDA127AC23E600982AD1 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6658DDA027AC23E600982AD1 /* WelcomeViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		661D7A1827ABFC3C0070486E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		661D7A1B27ABFC3C0070486E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		661D7A1D27ABFC3C0070486E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6655C86E27B287BB00C96BF8 /* user.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = user.swift; sourceTree = "<group>"; };
 		6658DDA027AC23E600982AD1 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -58,16 +60,57 @@
 		661D7A0E27ABFC3C0070486E /* HW2.3 */ = {
 			isa = PBXGroup;
 			children = (
-				661D7A0F27ABFC3C0070486E /* AppDelegate.swift */,
-				661D7A1127ABFC3C0070486E /* SceneDelegate.swift */,
-				661D7A1327ABFC3C0070486E /* LogInViewController.swift */,
-				661D7A1527ABFC3C0070486E /* Main.storyboard */,
-				6658DDA027AC23E600982AD1 /* WelcomeViewController.swift */,
-				661D7A1827ABFC3C0070486E /* Assets.xcassets */,
-				661D7A1A27ABFC3C0070486E /* LaunchScreen.storyboard */,
-				661D7A1D27ABFC3C0070486E /* Info.plist */,
+				6655C86927B284AB00C96BF8 /* ViewControllers */,
+				6655C86D27B2864D00C96BF8 /* Models */,
+				6655C86A27B284D800C96BF8 /* Storyboards */,
+				6655C86C27B2851900C96BF8 /* App */,
+				6655C86B27B284F200C96BF8 /* Resources */,
 			);
 			path = HW2.3;
+			sourceTree = "<group>";
+		};
+		6655C86927B284AB00C96BF8 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				661D7A1327ABFC3C0070486E /* LogInViewController.swift */,
+				6658DDA027AC23E600982AD1 /* WelcomeViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		6655C86A27B284D800C96BF8 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				661D7A1527ABFC3C0070486E /* Main.storyboard */,
+				661D7A1A27ABFC3C0070486E /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		6655C86B27B284F200C96BF8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				661D7A1827ABFC3C0070486E /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		6655C86C27B2851900C96BF8 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				661D7A0F27ABFC3C0070486E /* AppDelegate.swift */,
+				661D7A1127ABFC3C0070486E /* SceneDelegate.swift */,
+				661D7A1D27ABFC3C0070486E /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		6655C86D27B2864D00C96BF8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6655C86E27B287BB00C96BF8 /* user.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +184,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6655C86F27B287BB00C96BF8 /* user.swift in Sources */,
 				661D7A1427ABFC3C0070486E /* LogInViewController.swift in Sources */,
 				6658DDA127AC23E600982AD1 /* WelcomeViewController.swift in Sources */,
 				661D7A1027ABFC3C0070486E /* AppDelegate.swift in Sources */,
@@ -295,7 +339,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = YZ59UG65M4;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = HW2.3/Info.plist;
+				INFOPLIST_FILE = HW2.3/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -324,7 +368,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = YZ59UG65M4;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = HW2.3/Info.plist;
+				INFOPLIST_FILE = HW2.3/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

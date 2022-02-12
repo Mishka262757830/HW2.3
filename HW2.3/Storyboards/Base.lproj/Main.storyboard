@@ -40,7 +40,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I7s-UT-Ztx">
                                                 <rect key="frame" x="0.0" y="0.0" width="106" height="40.5"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Forgot username?">
+                                                <buttonConfiguration key="configuration" style="plain" title="Forgot username?" titleAlignment="automatic">
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="11"/>
                                                 </buttonConfiguration>
                                                 <connections>
@@ -99,22 +99,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="bTB-xX-1d9">
-                                <rect key="frame" x="108.5" y="120" width="103.5" height="269"/>
+                                <rect key="frame" x="16" y="120" width="288" height="269"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lz5-Bj-gUv">
-                                        <rect key="frame" x="24.5" y="0.0" width="54.5" height="27.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lz5-Bj-gUv">
+                                        <rect key="frame" x="117" y="0.0" width="54.5" height="27.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                         <color key="textColor" systemColor="systemOrangeColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🤘" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jcL-lr-76h">
-                                        <rect key="frame" x="24.5" y="97.5" width="54" height="60"/>
+                                        <rect key="frame" x="117" y="97.5" width="54" height="60"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qgu-Px-1LW">
-                                        <rect key="frame" x="0.0" y="227.5" width="103.5" height="41.5"/>
+                                        <rect key="frame" x="92.5" y="227.5" width="103.5" height="41.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Log Out">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="23"/>
@@ -132,14 +132,16 @@
                         <constraints>
                             <constraint firstItem="bTB-xX-1d9" firstAttribute="centerX" secondItem="wPd-sE-cWE" secondAttribute="centerX" id="5KP-Am-CS3"/>
                             <constraint firstItem="bTB-xX-1d9" firstAttribute="top" secondItem="MkR-8Y-ul5" secondAttribute="top" constant="120" id="LaM-Tj-hSU"/>
+                            <constraint firstItem="bTB-xX-1d9" firstAttribute="leading" secondItem="MkR-8Y-ul5" secondAttribute="leading" constant="16" id="Nkf-e5-xhT"/>
+                            <constraint firstItem="MkR-8Y-ul5" firstAttribute="trailing" secondItem="bTB-xX-1d9" secondAttribute="trailing" constant="16" id="bwf-TU-WpK"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="welcomeLabel" destination="lz5-Bj-gUv" id="UAK-ei-XlX"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iGn-zm-QcL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="3QT-UP-9Uf" userLabel="Exit" sceneMemberID="exit"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iGn-zm-QcL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="743" y="97"/>
         </scene>

@@ -12,15 +12,18 @@ class LogInViewController: UIViewController {
     @IBOutlet var passwordTF: UITextField!
     
     
-    private let login = "user"
-    private let password = "password"
+//    private let login = "user"
+//    private let password = "password"
+    
+    private let user = User.getUser()
+    private let person = Person.getPerson()
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeVC = segue.destination as? WelcomeViewController else {return}
         
-        welcomeVC.welcomeMessage = "Welcome, \(loginTF.text ?? "")!!!"
+        welcomeVC.welcomeMessage = "Привет, уважаемый гость!"
         
-        if loginTF.text != login || passwordTF.text != password {
+        if loginTF.text != user.login || passwordTF.text != user.password {
             showAlert(title: "Sorry!", message: "Wrong login or password!")
             passwordTF.text = ""
         }
@@ -33,11 +36,11 @@ class LogInViewController: UIViewController {
     }
 
     @IBAction func loginReminderButtonPressed(_ sender: UIButton) {
-        showAlert(title: "Your login is:", message: login)
+        showAlert(title: "Your login is:", message: user.login)
     }
     
     @IBAction func passwordReminderButtonPressed(_ sender: UIButton) {
-        showAlert(title: "Your password is:", message: password)
+        showAlert(title: "Your password is:", message: user.password)
     }
     
     private func showAlert(title: String, message: String) {
