@@ -3,6 +3,7 @@
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -66,7 +67,7 @@
                                             <fontDescription key="titleFontDescription" type="system" pointSize="23"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="yvW-yV-90X" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="koE-Qx-xod"/>
+                                            <segue destination="8IZ-06-nT5" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="koE-Qx-xod"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -81,6 +82,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nZF-WN-1xD" secondAttribute="trailing" constant="50" id="q64-vB-SWZ"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="xKu-Bf-AbT"/>
                     <connections>
                         <outlet property="loginTF" destination="QbX-Pe-tjh" id="Byb-5a-LKt"/>
                         <outlet property="passwordTF" destination="zTP-Wf-LLz" id="e26-XB-oYI"/>
@@ -90,11 +92,11 @@
             </objects>
             <point key="canvasLocation" x="35" y="98"/>
         </scene>
-        <!--Welcome View Controller-->
+        <!--Home-->
         <scene sceneID="OIv-IN-kpb">
             <objects>
                 <viewController id="yvW-yV-90X" customClass="WelcomeViewController" customModule="HW2_3" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="wPd-sE-cWE">
+                    <view key="view" alpha="0.94999999999999996" contentMode="scaleToFill" id="wPd-sE-cWE">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -128,7 +130,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MkR-8Y-ul5"/>
-                        <color key="backgroundColor" red="0.2747312255851434" green="0.58097570614787519" blue="0.791778564453125" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" systemColor="systemGray3Color"/>
                         <constraints>
                             <constraint firstItem="bTB-xX-1d9" firstAttribute="centerX" secondItem="wPd-sE-cWE" secondAttribute="centerX" id="5KP-Am-CS3"/>
                             <constraint firstItem="bTB-xX-1d9" firstAttribute="top" secondItem="MkR-8Y-ul5" secondAttribute="top" constant="120" id="LaM-Tj-hSU"/>
@@ -136,6 +138,9 @@
                             <constraint firstItem="MkR-8Y-ul5" firstAttribute="trailing" secondItem="bTB-xX-1d9" secondAttribute="trailing" constant="16" id="bwf-TU-WpK"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="globe.americas.fill" catalog="system" id="u1Z-KQ-G1T">
+                        <color key="badgeColor" name="AccentColor"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="welcomeLabel" destination="lz5-Bj-gUv" id="UAK-ei-XlX"/>
                     </connections>
@@ -143,10 +148,100 @@
                 <exit id="3QT-UP-9Uf" userLabel="Exit" sceneMemberID="exit"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iGn-zm-QcL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="743" y="97"/>
+            <point key="canvasLocation" x="1470" y="97"/>
+        </scene>
+        <!--About me-->
+        <scene sceneID="qGB-sz-QgN">
+            <objects>
+                <viewController id="xc0-eu-zLg" customClass="AboutMeViewController" customModule="HW2_3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WoA-y7-JTO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IhX-MF-rCb">
+                                <rect key="frame" x="16" y="270.5" width="288" height="27.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" systemColor="systemOrangeColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ASb-26-MIn"/>
+                        <color key="backgroundColor" systemColor="systemGray3Color"/>
+                        <constraints>
+                            <constraint firstItem="IhX-MF-rCb" firstAttribute="leading" secondItem="ASb-26-MIn" secondAttribute="leading" constant="16" id="2Hi-gb-F43"/>
+                            <constraint firstItem="IhX-MF-rCb" firstAttribute="centerY" secondItem="WoA-y7-JTO" secondAttribute="centerY" id="4Tk-DZ-dAL"/>
+                            <constraint firstItem="ASb-26-MIn" firstAttribute="trailing" secondItem="IhX-MF-rCb" secondAttribute="trailing" constant="16" id="sPB-CZ-Sms"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="About me" image="person.text.rectangle.fill" catalog="system" id="e0r-uD-5FD"/>
+                    <connections>
+                        <outlet property="aboutMeLabel" destination="IhX-MF-rCb" id="Fn2-qM-2tM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V3r-n0-8p7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2153" y="97"/>
+        </scene>
+        <!--My dream-->
+        <scene sceneID="cK0-oZ-Hxe">
+            <objects>
+                <viewController id="orm-b8-P3x" customClass="DreamViewController" customModule="HW2_3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="stA-ho-rKe">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQc-ap-1w8">
+                                <rect key="frame" x="16" y="270.5" width="288" height="27.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" systemColor="systemOrangeColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7gf-RS-UMm"/>
+                        <color key="backgroundColor" systemColor="systemGray3Color"/>
+                        <constraints>
+                            <constraint firstItem="LQc-ap-1w8" firstAttribute="centerY" secondItem="stA-ho-rKe" secondAttribute="centerY" id="5D0-Lz-m1U"/>
+                            <constraint firstItem="7gf-RS-UMm" firstAttribute="trailing" secondItem="LQc-ap-1w8" secondAttribute="trailing" constant="16" id="J23-TZ-YEA"/>
+                            <constraint firstItem="LQc-ap-1w8" firstAttribute="leading" secondItem="7gf-RS-UMm" secondAttribute="leading" constant="16" id="YGW-g5-JP1"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="My dream" image="target" catalog="system" id="lSF-1k-AFh"/>
+                    <connections>
+                        <outlet property="myDreamLabel" destination="LQc-ap-1w8" id="mta-8G-YuW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KtN-kW-Ax7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2842.5" y="96.126760563380287"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="P5F-Si-Z6d">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="8IZ-06-nT5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="blJ-xE-QdU">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="yvW-yV-90X" kind="relationship" relationship="viewControllers" id="0py-Tl-XFJ"/>
+                        <segue destination="xc0-eu-zLg" kind="relationship" relationship="viewControllers" id="OGc-mr-mi5"/>
+                        <segue destination="orm-b8-P3x" kind="relationship" relationship="viewControllers" id="fxD-Eb-abH"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mGb-EE-nyB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="742.5" y="96.126760563380287"/>
         </scene>
     </scenes>
     <resources>
+        <image name="globe.americas.fill" catalog="system" width="128" height="121"/>
+        <image name="person.text.rectangle.fill" catalog="system" width="128" height="93"/>
+        <image name="target" catalog="system" width="128" height="121"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemGray3Color">
             <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

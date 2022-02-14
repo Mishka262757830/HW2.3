@@ -19,9 +19,20 @@ class LogInViewController: UIViewController {
     private let person = Person.getPerson()
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else {return}
+        guard let tapBarController = segue.destination as? UITabBarController else {return}
+        guard let viewControllers = tapBarController.viewControllers else {return}
         
-        welcomeVC.welcomeMessage = "Привет, уважаемый гость!"
+        for viewController in viewControllers {
+            if let welcomeVC = viewController as? WelcomeViewController {
+                welcomeVC.welcomeMessage = "Привет, уважаемый гость!"
+            } else if let aboutMeVC = viewController as? AboutMeViewController {
+                aboutMeVC.aboutMeMessage = """
+                Меня зовут \(person.name) \(person.surname). Мне \(person.age) лет.
+                """
+            } else if let myDreamVC = viewController as? DreamViewController {
+                myDreamVC.myDreamMessage = "\(person.myDream)"
+            }
+        }
         
         if loginTF.text != user.login || passwordTF.text != user.password {
             showAlert(title: "Sorry!", message: "Wrong login or password!")
