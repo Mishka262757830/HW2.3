@@ -11,12 +11,7 @@ class LogInViewController: UIViewController {
     @IBOutlet var loginTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
-    
-//    private let login = "user"
-//    private let password = "password"
-    
     private let user = User.getUser()
-    private let person = Person.getPerson()
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let tapBarController = segue.destination as? UITabBarController else {return}
@@ -24,13 +19,11 @@ class LogInViewController: UIViewController {
         
         for viewController in viewControllers {
             if let welcomeVC = viewController as? WelcomeViewController {
-                welcomeVC.welcomeMessage = "Привет, уважаемый гость!"
+                welcomeVC.welcomeMessage = user.greating
             } else if let aboutMeVC = viewController as? AboutMeViewController {
-                aboutMeVC.aboutMeMessage = """
-                Меня зовут \(person.name) \(person.surname). Мне \(person.age) лет.
-                """
+                aboutMeVC.user = user
             } else if let myDreamVC = viewController as? DreamViewController {
-                myDreamVC.myDreamMessage = "\(person.myDream)"
+                myDreamVC.myDreamMessage = user.person.myDream
             }
         }
         

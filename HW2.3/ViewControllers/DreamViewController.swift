@@ -18,8 +18,4 @@ class DreamViewController: UIViewController {
         super.viewDidLoad()
         myDreamLabel.text = myDreamMessage
     }
-    
-    @IBAction func test() {
-        dismiss(animated: true)
-    }
 }

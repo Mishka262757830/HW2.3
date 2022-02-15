@@ -10,12 +10,14 @@ import CoreGraphics
 struct User {
     let login: String
     let password: String
+    let greating: String
     let person: Person
     
     static func getUser() -> User {
         User(
             login: "user",
             password: "password",
+            greating: "Привет, уважаемый гость!",
             person: Person.getPerson()
         )
     }
